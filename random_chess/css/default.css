@@ -1,0 +1,67 @@
+/*
+  ex.
+
+  div {
+    border: 1px solid black;
+    width: 33px;
+  }
+
+*/
+
+svg {
+  /*border: 1px dotted gray;*/
+}
+
+div.heatmap_container {
+  padding: 20px;
+}
+
+div.button {
+  margin-right: 2px;
+  padding: 4px;
+  border: 1px dotted gray;
+  width: 10%;
+  display: inline-block;
+  text-align: center;
+}
+
+div.clean_text_container {
+  margin-left: 4px;
+  padding: 4px;
+  border: 1px dotted gray;
+  width: 220px;
+  display: inline-block;
+  text-align: left;
+}
+
+div.clean_text{
+  display: inline-block;
+  text-align: center;
+}
+
+
+.btn-group {
+
+}
+
+.game_wins_random {
+  fill: #0078B2;
+}
+.game_losses_random {
+  fill: #19B4FF;
+}
+
+.game_wins_masters {
+  fill: #B26200;
+}
+.game_losses_masters {
+  fill: #9E813C;
+}
+
+
+.initial_findings_text {
+  font-size: 2px;
+  fill: white;
+  stroke: none;
+  text-anchor: middle;
+}

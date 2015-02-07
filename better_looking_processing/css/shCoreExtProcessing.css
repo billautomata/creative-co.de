@@ -1,0 +1,8 @@
+.syntaxhighlighter
+{
+  font-family: 'Source Code Pro', Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+}
+
+.syntaxhighlighter .gutter .line {
+  border-right: 1px solid #dddddd !important;
+}

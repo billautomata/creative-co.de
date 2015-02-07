@@ -1,0 +1,204 @@
+.syntaxhighlighter.processing
+{
+	/*background-color: #E7E5DC !important;*/
+
+	font-family: 'Source Code Pro', Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+}
+
+.syntaxhighlighter.processing .gutter .line {
+	border-right: 1px solid #dddddd !important;
+}
+
+/* Highlighed line number */
+.syntaxhighlighter.processing .line.highlighted .number
+{
+	background-color: #6CE26C !important;
+	color: black !important;
+}
+
+/* Highlighed line */
+.syntaxhighlighter.processing .line.highlighted.alt1 .content,
+.syntaxhighlighter.processing .line.highlighted.alt2 .content
+{
+	background-color: #6CE26C !important;
+}
+
+/* Gutter line numbers */
+.syntaxhighlighter.processing .line .number
+{
+	color: #5C5C5C !important;
+}
+
+/* Add border to the lines */
+.syntaxhighlighter.processing .line .content
+{
+	border-left: 3px solid #6CE26C !important;
+	color: #000 !important;
+}
+
+.syntaxhighlighter.processing.printing .line .content 
+{
+	border: 0 !important;
+}
+
+/* First line */
+.syntaxhighlighter.processing .line.alt1 .content
+{
+	background-color: #fff !important;
+}
+
+/* Second line */
+.syntaxhighlighter.processing .line.alt2 .content
+{
+	background-color: #F8F8F8 !important;
+}
+
+.syntaxhighlighter.processing .line .content .block
+{
+	background: url(wrapping.png) 0 1.1em no-repeat !important;
+}
+
+.syntaxhighlighter.processing .ruler
+{
+	color: silver !important;
+	background-color: #F8F8F8 !important;
+	border-left: 3px solid #6CE26C !important;
+}
+
+.syntaxhighlighter.processing.nogutter .ruler
+{
+	border: 0 !important;
+}
+
+.syntaxhighlighter.processing .toolbar
+{
+	background-color: #F8F8F8 !important;
+	border: #E7E5DC solid 1px !important;
+}
+
+.syntaxhighlighter.processing .toolbar a
+{
+	color: #a0a0a0 !important;
+}
+
+.syntaxhighlighter.processing .toolbar a:hover
+{
+	color: red !important;
+}
+
+/************************************
+ * Actual syntax highlighter colors.
+ ************************************/
+.syntaxhighlighter.processing .plain,
+.syntaxhighlighter.processing .plain a
+{ 
+	color: #000 !important;
+}
+
+.syntaxhighlighter.processing .comments,
+.syntaxhighlighter.processing .comments a
+{ 
+	color: #008200 !important;
+}
+
+.syntaxhighlighter.processing .string,
+.syntaxhighlighter.processing .string a
+{
+	color: blue !important; 
+}
+
+.syntaxhighlighter.processing .keyword
+{ 
+	color: #069 !important; 
+	font-weight: bold !important; 
+}
+
+.syntaxhighlighter.processing .preprocessor 
+{ 
+	color: gray !important; 
+}
+
+.syntaxhighlighter.processing .variable 
+{ 
+	color: #a70 !important; 
+}
+
+.syntaxhighlighter.processing .value
+{ 
+	color: #090 !important; 
+}
+
+.syntaxhighlighter.processing .functions
+{ 
+	color: #ff1493 !important; 
+}
+
+.syntaxhighlighter.processing .constants
+{ 
+	color: #0066CC !important; 
+}
+
+.syntaxhighlighter.processing .script
+{ 
+	background-color: yellow !important;
+}
+
+.syntaxhighlighter.processing .color1,
+.syntaxhighlighter.processing .color1 a
+{ 
+	color: #808080 !important; 
+}
+
+.syntaxhighlighter.processing .color2,
+.syntaxhighlighter.processing .color2 a
+{ 
+	color: #ff1493 !important; 
+}
+
+.syntaxhighlighter.processing .color3,
+.syntaxhighlighter.processing .color3 a
+{ 
+	color: red !important; 
+}
+
+.syntaxhighlighter.processing .color4,
+.syntaxhighlighter.processing .color4 a
+{ 
+	color: #006699 !important; 
+}
+
+.syntaxhighlighter.processing .color5,
+.syntaxhighlighter.processing .color5 a
+{ 
+	color: #CC6600 !important; 
+}
+
+/* -------------------------------------- */
+
+.syntaxhighlighter.processing .keyword1 {
+	color: #33997e;
+}
+.syntaxhighlighter.processing .keyword2 {
+	color: #669900;
+}
+.syntaxhighlighter.processing .keyword3 {
+	color: #d94a7a;
+}
+.syntaxhighlighter.processing .keyword3 {
+	color: #e2661a;
+}
+
+.syntaxhighlighter.processing .literal2 {
+	color: #718a62;
+}
+
+.syntaxhighlighter.processing .function2 {
+	color: #006699;
+}
+.syntaxhighlighter.processing .function1 {
+	color: #669900;
+}
+
+.syntaxhighlighter.processing .comment {
+	color: #666666;
+}

@@ -1,0 +1,343 @@
+<html>
+    <head>
+    <title>creative-co.de | Bill McKessy</title>
+
+    <script src="lib/jquery-2.0.3.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+
+    <script>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-29337403-1']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google
+
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+    </script>
+
+    <style>
+
+        body {
+            background-image: url('images/background/large_bg.jpg');
+        }
+
+        .nameDiv {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-family: monospace;
+            font-size: 20px;
+            background-color: rgb(128,128,128);
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 2px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(128,128,128);
+        }
+        .nameDiv a {
+            text-decoration: none;
+            color: rgb(255,255,255);
+        }
+
+        .linksContainerDiv {
+            position: absolute;
+            top: 10px;
+            left: 170px;
+        }
+        .linksDiv {
+            display: inline-block;
+
+            font-family: monospace;
+            font-size: 10px;
+
+            background-color: rgb(196,196,196);
+            color: rgb(255,255,255);
+
+            padding-left: 5px;
+            padding-right: 5px;
+
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(128,128,128);
+
+            margin: 1px;
+
+        }
+        .linksDiv a {
+            text-decoration: none;
+            color: rgb(96,96,96);
+        }
+
+        .contentDiv {
+            padding-top: 30px;
+        }
+        .contentBox {
+            vertical-align: top;
+            display: inline-block;
+            width: 260px;
+            /* height: 300px; */
+            background-color: rgb(200,200,200);
+            margin-left: 3px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+            position: relative;
+        }
+        .title{
+            position: absolute;
+            top: 132px;
+            padding-left: 1px;
+            padding-right: 2px;
+            font-family: monospace,monospace;
+            font-size: 12px;
+            color: rgb(255,255,255);
+            background-color: rgb(100,100,100);
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(10,10,10);
+        }
+        .img{
+            padding-left:2px;
+            padding-right:2px;
+            padding-top: 1px;
+            width:256px;
+            height:144px;
+        }
+        .textBox{
+            padding-left:2px;
+            padding-right:2px;
+            padding-top: 1px;
+            font-family: monospace,monospace;
+            font-size: 12px;
+            color: rgb(100,100,100);
+            border-width: 1px;
+            border-color: rgb(20,20,20);
+            border-style: dotted;
+            margin: 2px;
+        }
+        .tagBox{
+
+            font-family: monospace;
+            font-size: 10px;
+
+            background-color: rgb(196,196,196);
+            color: rgb(255,255,255);
+
+            padding-left:2px;
+            padding-right:2px;
+            padding-top: 1px;
+
+            text-align: center;
+            border-style: dotted;
+            border-width: 1px;
+            border-color: rgb(210,210,210);
+            float: left;
+        }
+        .tagBox a {
+            text-decoration: none;
+            color: rgb(32,32,32);
+        }
+
+    </style>
+
+    <script>
+
+        var links = [];
+
+        links.push(new LinkBox('twitter', 'http://twitter.com/billautomata'));
+        links.push(new LinkBox('vimeo', 'http://vimeo.com/billautomata'));
+        links.push(new LinkBox('flickr', 'http://www.flickr.com/photos/billautomata/'));
+        links.push(new LinkBox('github', 'https://github.com/billautomata'));
+        links.push(new LinkBox('instagram', 'http://instagram.com/billautomata'));
+
+        function LinkBox(text, href) {
+            this.text = text;
+            this.href = href;
+        }
+
+        var boxes = [];
+
+	boxes.push(new ContentBox("Temporal Crime Histograms", "images/temporal_crime_histograms.jpg", "http://creative-co.de/temporal_crime_histograms/", ['2014','d3', 'data_viz', 'processing'], "Hourly and daily histograms of the incidents of crime in Portland Oregon from 2007 to 2013."))
+	boxes.push(new ContentBox("Finding Faces In The Sun", "images/faces_in_the_sun.jpg", "http://creative-co.de/finding_faces_in_the_sun/", ['2013','openframeworks','data_viz', 'computer_vision'], "Using hundreds of ultra high resolution images from the NASA Solar Observatory and facial recognition algorithms, I found over 100 terrifying faces in the surface of the sun."))
+	boxes.push(new ContentBox("Novel Search", "images/novel_search.jpg", "http://creative-co.de/labs/potter/", ['2013','html5','data_viz'], "Plot the occurence of words and phrases across a number of popular book series."))
+        boxes.push(new ContentBox("Universal Constructor", "images/universal_constructor.jpg", "https://vimeo.com/24855626", ['2011','openframeworks','fine_art','neural_networks','genetic_algorithm'], "A population of neural networks spread, evolve, and battle each other on a grid."))
+        boxes.push(new ContentBox("Ignite Portland Talk", "images/ignite_portland.jpg", "http://www.youtube.com/watch?v=6MP7qf90anc", ['2013','processing','talks'], "My Ignite Portland 12 talk - Everyone Should Learn to Creative Code."))
+        boxes.push(new ContentBox("Image Approximation", "images/image_approximation.jpg", "https://vimeo.com/19148233", ['2012','openframeworks','fine_art','approximation','genetic_algorithm'], "A video of tens of thousands of partially transparent triangles layered atop each other to approximate a source image."))
+        boxes.push(new ContentBox("1.3 Teraflops", "images/1.3_teraflops.jpg", "https://vimeo.com/47221973", ['2012','openframeworks','glsl','gpu','vj','genetic_algorithm'], "An algorithm that creates random GLSL fragment shaders. iPad controlled, was used in conjunction with a projector, for visual effects at electronic music dance parties."))
+        boxes.push(new ContentBox("Integer Crystal Formation", "images/integer_crystal.jpg", "https://vimeo.com/25913146", ['2011','python','gpu','opencl'], "A cellular automata implemented in OpenCL that forms crystalline structures."))
+        boxes.push(new ContentBox("Lab of Tomorrow", "images/lab_of_tomorrow.jpg", "https://vimeo.com/25907208", ['2011','fine_art','hardware','installation'], "7 unique finite state machines inhabit and traverse a grid. When they intersect each other they will share the code that governs their behavior."))
+        boxes.push(new ContentBox("IRC Visualization", "images/irc_data_viz.jpg", "https://vimeo.com/71553558", ['2013','data_viz','processing'], "A visualization of two years of IRC logs.  Connections are graphed between different engineering departments of a Portland tech startup."))
+        boxes.push(new ContentBox("Motivational Posters", "images/motivational_posters.jpg", "http://www.flickr.com/photos/billautomata/sets/72157628996185263/", ['2012','fine_art','blender','opencl'], "A series of motivatonal posters that reflect the values of modern society culture."))
+        boxes.push(new ContentBox("Approximate Portraits", "images/approximate_portraits.jpg", "http://www.flickr.com/photos/billautomata/sets/72157630558005310/", ['2012','processing','approximation','portrait','genetic_algorithm'], "Thousands of polygons evolve their positions and colors over time to approximate a portrait photograph."))
+        boxes.push(new ContentBox("Hemesh 2 Embree", "images/hemesh_2_embree.jpg", "http://www.flickr.com/photos/billautomata/sets/72157629780925887/", ['2013','processing','embree','hemesh'], "I wrote a tool for Processing that exports Hemesh meshes to the XML format that the Intel Embree renderer expects."))
+        boxes.push(new ContentBox("Gameboy Workout", "images/gameboy_workout.jpg", "https://vimeo.com/9947986", ['2010','music'], "A video from a practice session of my electronic music band, University Acid Squad."))
+        boxes.push(new ContentBox("Superwave", "images/super_wave.jpg", "https://vimeo.com/28475993", ['2012','installation'], "A 5 foot wave in an above ground pool."))
+        boxes.push(new ContentBox("Actually Using Logic", "images/using_logic.jpg", "https://vimeo.com/32381425", ['2012','genetic_algorithm'], "A simulation of an FPGA circuit evolving the ability to output an approximation of a sine wave of an arbitrary frequency."))
+        boxes.push(new ContentBox("turbo glitch", "images/turbo_glitch.jpg", "https://vimeo.com/31587493", ['2012','film'], "A short film about coffee."))
+        boxes.push(new ContentBox("Warrant Map", "images/memphis_warrant_map.jpg", "http://www.flickr.com/photos/billautomata/sets/72157629877579410/", ['2012','data_viz'], "A visualizaton of the last known addresses of people with oustanding warrants in the Memphis and Shelby county courts system.  The visualizations are sorted by offense type."))
+        boxes.push(new ContentBox("Memphis Most Wanted", "images/memphis_most_wanted.jpg", "http://www.flickr.com/photos/billautomata/sets/72157629877687782/", ['2012','data_viz'], "A collection of mugshots of criminal suspects with outstanding warrants in the Memphis and Shelby county courts system.  The collections are sorted by offense type."))
+        boxes.push(new ContentBox("Mount St Helens Summit", "images/mt_st_helens.jpg", "http://www.flickr.com/photos/billautomata/sets/72157635661025566/", ['2013','photography'], "Photographs of my trip to the summit of Mount St Helens with my girlfriend."))
+        boxes.push(new ContentBox("L-System", "images/l_system.jpg", "http://www.flickr.com/photos/billautomata/sets/72157637748833906/", ['2011','openframeworks'], "An L-System that implements rules for a color system along with position. Instead of drawing lines, I draw triangles."))
+        boxes.push(new ContentBox("Film Sorted by Brightness", "images/film_sorted_by_brightness.jpg", "https://vimeo.com/46437512", ['2012','processing', 'opencl', 'gpu'], "Hundreds of thousands of frames of a film have the average brightness of the pixels in the frame calculated.  The film is then re-arranged by the brightness of the frame."))
+        boxes.push(new ContentBox("Random Chess Moves in Javascript", "images/random_chess_moves.jpg", "http://creative-co.de/random_chess/", ['2014','data_viz', 'd3js', 'nodejs'], "What does a chess game that contains only random moves look like?  How does it compare to the masters of chess through history?  An analysis and visualization of over 400,000 games."))
+        boxes.push(new ContentBox("Better Looking Processing", "images/better_looking_processing.gif", "http://creative-co.de/better_looking_processing/", ['2014','processing', 'guides' ], "A tour of the built-in Processing functions for making your sketches shine."))                
+
+
+        boxes = _.shuffle(boxes);
+
+        console.log(boxes);
+
+        function ContentBox(title, imgSrc, link, tags, blurb) {
+
+            this.title = title;
+            this.imageSrc = imgSrc;
+            this.link = link;
+            this.blurb = blurb;
+
+            this.tags = tags;
+        }
+    </script>
+    </head>
+
+    <body>
+
+    </body>
+
+    <script>
+
+
+
+        var body = $('body');
+        console.log(body);
+
+        var contentDiv = $(document.createElement('div'));
+        contentDiv.addClass('contentDiv');
+
+        var nameDiv = $(document.createElement('div'));
+        nameDiv.addClass('nameDiv');
+        nameDiv.html('<a href="http://creative-co.de/">bill_mckessy</a>');
+        contentDiv.append(nameDiv);
+
+        var linksContainerDiv = $(document.createElement('div'));
+        linksContainerDiv.addClass('linksContainerDiv');
+
+        links.forEach(function(link){
+            var linksDiv = $(document.createElement('div'));
+            linksDiv.addClass('linksDiv');
+            var html = '<a href=\"'+link.href+'\">'+link.text+'</a>';
+            linksDiv.html(html);
+            linksContainerDiv.append(linksDiv);
+        })
+
+        contentDiv.append(linksContainerDiv);
+
+        var searchString = window.location.search.split('=')[1];
+        console.log(searchString);
+
+
+        var listOfTags = {};
+
+        boxes.forEach(function(box){
+
+            if (box.tags.indexOf(searchString) != -1 || searchString == undefined) {
+
+                var d = $(document.createElement('div'));
+                d.addClass('contentBox')
+
+                var randomBackground = Math.floor(10*Math.random());
+                d.css('background-image', 'url(images/background/bg_'+randomBackground+'.jpg)');
+
+                // title
+                var title = $(document.createElement('div'));
+                title.addClass('title');
+                title.html(box.title);
+
+                d.append(title);
+
+                // preview image
+                var img = $(document.createElement('div'));
+                img.addClass('img');
+
+                var linkObject = $(document.createElement('a'));
+                linkObject.attr('href', box.link);
+
+                var imgObject = $(document.createElement('img'));
+                imgObject.attr('src', box.imageSrc);
+                imgObject.attr('width', 256);
+                imgObject.attr('height', 144);
+
+                img.append(imgObject);
+
+                linkObject.append(img);
+
+                d.append(linkObject);
+
+                // text
+                var textBox = $(document.createElement('div'));
+                textBox.addClass('textBox');
+
+                textBox.css('background-color', 'rgba(224,225,225,0.8)');
+
+                textBox.html(box.blurb);
+
+                d.append(textBox);
+
+                // tags
+                box.tags.forEach(function(tag){
+                    var tagBox = $(document.createElement('div'));
+                    tagBox.addClass('tagBox');
+                    var tagBoxHTML = '';
+                    var thisTag = '<a href=\"index.html?s='+tag+'\">' + tag + '</a>';
+                    tagBoxHTML += thisTag + ' ';
+                    tagBox.html(tagBoxHTML);
+                    d.append(tagBox);
+
+                });
+
+                // add to the body
+                contentDiv.append(d);
+            }
+
+        box.tags.forEach(function(tag){
+            if (listOfTags[tag] === undefined) {
+                listOfTags[tag] = 1;
+            } else {
+                listOfTags[tag]++;
+            }
+        });
+
+
+        })  // end of boxes.forEach
+
+
+        // list of tags
+        var min = _.min(listOfTags);
+        var max = _.max(listOfTags);
+
+        console.log(min);
+        console.log(max);
+
+        var tagsListDiv =  $(document.createElement('div'));
+        tagsListDiv.css('width', '260px');
+
+        for (var tag in listOfTags) {
+            var tagBox = $(document.createElement('div'));
+            tagBox.addClass('tagBox');
+            var tagBoxHTML = '';
+            var thisTag = '<a href=\"index.html?s='+tag+'\">' + tag + '</a>';
+            tagBoxHTML += thisTag + ' ';
+            tagBox.html(tagBoxHTML);
+            tagsListDiv.append(tagBox);
+        }
+
+        contentDiv.append(tagsListDiv)
+
+        body.append(contentDiv);
+
+    </script>
+
+</html>
